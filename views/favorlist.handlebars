@@ -1,0 +1,49 @@
+<script src="../../js/favorlist.js"></script>
+
+
+
+<h1 >Favorite Books</h1>
+<div >
+    <form  class = "filter" action="/filter" method="POST" >
+    <fieldset>
+      <input class = "search" name="keyword" placeholder="Type book title,author or isbn..">
+      <button class = "button search-btn" type="submit" id="submit"> SEARCH</button>
+    </fieldset>
+    </form>
+</div>
+<br><br>
+<div>
+    {{#if list }}
+    <table class = "results" >
+        <thead>
+        <tr>
+            <th>
+            Title
+            </th>
+            <th>
+            Action
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            
+        {{#each list }}
+                <td>{{ this.title }}</td>
+                <td>
+                    <button class = "button" onclick="editBook({{ this.isbn }})">Edit</button>
+                    <button class = "button"onclick="deleteBook({{ this.isbn }})">Delete</button>
+                </td>
+            </tr>
+        {{/each }}
+        </tbody>
+    </table>
+    {{else}}
+        <p> List is empty..</p>
+{{/if }}
+ 
+
+
+    <form action="edit" method="POST" id="favor_edit_form">
+        <input type="hidden" name="isbn" id="isbn">
+    </form>
+</div>

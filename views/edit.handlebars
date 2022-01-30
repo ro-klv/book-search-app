@@ -1,0 +1,32 @@
+<h2>Book Edit</h2>
+
+
+<form role="form" action="/update" method="POST">
+    <input type="hidden" name="isbn" value="{{ result.isbn }}">
+     <fieldset>
+            <legend >Title</legend>
+            <input type="text" name="title" value="{{ result.title }}">
+       </fieldset>
+       <fieldset>
+            <legend >Author</legend>
+            <input type="text" name="author" value="{{ result.author }}">
+            </fieldset>
+        <fieldset>
+             <legend >ISBN</legend>
+              <input type="number" name="new_isbn" value="{{ result.isbn }}" readonly>
+         </fieldset>
+          <fieldset>
+            <legend >Review</legend>
+            <textarea  rows="5" cols="50" name="review" placeholder="Enter more text">
+                {{ result.review }}
+            </textarea>
+       </fieldset>
+        <br><br>
+    
+        <button class = "button" type="submit" >Save</button>
+        <button class = "button" type="reset" >Undo Changes</button>
+        <a href="/list" class = "button">Cancel</a>
+           
+</form>
+
+    

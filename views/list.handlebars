@@ -1,0 +1,46 @@
+<script src="../../js/favorlist.js"></script>
+
+ <h1 >Search Results</h1>
+
+<div>
+    <table class = "results">
+        <thead>
+        <tr>
+            <th>
+            Title
+            </th>
+            <th>
+            Author
+            </th>
+            <th>
+            ISBN
+            </th>
+            <th>
+            Pages
+            </th>
+            <th>
+            Price (USD)
+            </th>
+            <th>
+            Action
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+            {{#if results }}
+                {{#each results }}
+                    <tr>
+                        <td>{{ this.titleshort }}</td>
+                        <td>{{ this.author }}</td>
+                        <td>{{ this.isbn }}</td>
+                        <td>{{ this.pages }}</td>
+                        <td>{{ this.priceusa }}</td>
+                        <td><button class = "button" onclick="addBook(`{{ this.titleshort }}`, `{{ this.author }}`,  `{{ this.isbn }}`, ``)">Add to your favorite</button></td>
+                    </tr>
+                {{/each }}
+            {{/if}}
+           
+        </tbody>
+    </table>
+</div>

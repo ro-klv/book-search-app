@@ -1,0 +1,146 @@
+
+
+body {
+  text-align: center;
+  color: rgb(255, 255, 255) ;
+  font-size: 20px;
+  background-image: url("../images/books.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  height: 100%;
+  position: relative;
+}
+
+
+h1{
+  font-size: 45px;
+}
+
+
+nav{
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  background: #000000;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar li a {
+ 
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.navbar li a:hover {
+  background-color: #1a1a1a;
+  color: rgb(139, 37, 30);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color:black;
+  
+}
+
+a.penguin{
+  color:rgb(153, 121, 113) ;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+body::after {
+  display: block;
+  content: "";
+  background-color: rgb(41, 36, 34);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  opacity: 0.8;
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;   
+}
+
+.button {
+  border: rgba(102, 31, 15, 0.919);
+  border-style: solid;
+  border-width: thick;
+  border-radius: 4px;
+  padding: 5px;
+  background: rgba(187, 187, 187, 0.953);
+  color:rgb(0, 0, 0);
+  font-size: 18px;
+}
+
+.button:hover {
+  border: rgb(0, 0, 0) ;
+  border-style: solid;
+  border-width: thick;
+  padding: 5px;
+  cursor:pointer;
+}
+
+
+table.results{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+ th{
+  text-align: center;
+  padding: 9px;
+  background-color: rgba(102, 31, 15, 0.857);
+  color: white;
+}
+
+td{
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.534);
+  font-weight: bold;
+  color: #111111;
+}
+
+fieldset{
+  border: 0;
+  border-radius: 4px;
+}
+
+input {
+  border-radius: 4px;
+  padding: 5px;
+  width:20%;
+}
+
+
+input.search{
+  width:20%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-seo-dreamstale-lineal-dreamstale-7.png");
+  background-position: 5px 5px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
